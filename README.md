@@ -188,7 +188,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-Created as part of a systems programming course project.
+**Juan Sánchez Vinuesa**
+
+Created as a project for the Operating Systems course at Universidad Rey Juan Carlos (URJC).
 
 ---
 
