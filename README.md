@@ -1,32 +1,40 @@
-# Photocall - Photo Collection Manager
+# Photocall
 
-A shell script for creating organized photo collections from multiple directories with automatic renaming, format normalization, and metadata generation.
+**Organize photo collections from multiple directories with automatic renaming and metadata generation**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Shell Script](https://img.shields.io/badge/Shell-POSIX-blue.svg)](https://www.gnu.org/software/bash/)
+[![URJC](https://img.shields.io/badge/University-URJC-red.svg)](https://www.urjc.es/)
+
+A POSIX-compliant shell script for creating organized photo collections with standardized naming conventions and detailed metadata.
 
 ## Description
 
-`photocall.sh` is a POSIX-compliant shell script that scans multiple directories recursively for image files, copies them to a centralized collection directory with standardized naming conventions, and generates metadata about the collection.
+`photocall.sh` scans multiple directories recursively for image files, copies them to a centralized collection directory with standardized naming conventions, and generates detailed metadata about the collection.
 
 ## Features
 
-- ✅ Recursive directory scanning
-- ✅ Support for multiple image formats (JPEG, PNG, TIFF)
-- ✅ Automatic file renaming with parent directory context
-- ✅ Extension normalization (.jpeg → .jpg)
-- ✅ Space-to-dash conversion in filenames
-- ✅ Collision detection with safe rollback
-- ✅ Metadata generation with file sizes
-- ✅ Sorted output by file size
-- ✅ Handles filenames and paths with spaces
+- Recursive directory scanning
+- Support for multiple image formats (JPEG, PNG, TIFF)
+- Automatic file renaming with parent directory context
+- Extension normalization (.jpeg → .jpg, .PNG → .png)
+- Space-to-dash conversion in filenames
+- Collision detection with safe rollback
+- Metadata generation with file sizes
+- Sorted output by file size
+- Handles filenames and paths with spaces
 
 ## Requirements
 
 - POSIX-compliant shell (`sh`, `bash`, `dash`, etc.)
 - Standard Unix utilities: `find`, `grep`, `sed`, `awk`, `sort`
 
+Works on Linux, macOS, and BSD systems.
+
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/photocall.git
+git clone https://github.com/Jsanchezv2201/photocall.git
 cd photocall
 chmod +x photocall.sh
 ```
@@ -64,7 +72,7 @@ chmod +x photocall.sh
 ./photocall.sh /home/user/photos/collection /home/user/vacation /home/user/events
 ```
 
-### Example Directory Structure
+### Complete Example
 
 **Before:**
 ```
@@ -169,6 +177,10 @@ Example test directories are provided in the repository:
 ```bash
 # Run with test data
 ./photocall.sh collection d1 d2
+
+# Check the results
+ls -lh collection/
+cat collection/metadata.txt
 ```
 
 ## Exit Codes
@@ -180,18 +192,20 @@ Example test directories are provided in the repository:
 
 ## License
 
-MIT License - Feel free to use and modify as needed.
+MIT License
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome. Feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## Author
 
 **Juan Sánchez Vinuesa**
 
-Created as a project for the Operating Systems course at Universidad Rey Juan Carlos (URJC).
-
----
-
-**Note**: This script is designed for POSIX compliance and should work on any Unix-like system including Linux, macOS, and BSD variants.
+Universidad Rey Juan Carlos (URJC) - Operating Systems Course Project
